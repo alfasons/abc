@@ -183,14 +183,14 @@ body > section {
 }
 
 .top-bar {
-  padding: 10px 0;
-  background: #191919;
-  border-bottom: 1px solid #222;
-  line-height: 28px;
+  padding: 20px 0;
+  background: #fff;
+ 
+  line-height: 20px;
 }
 
 .top-number{
-  color: #fff;
+  color: #000;
 }
 
 .top-number p{
@@ -229,7 +229,7 @@ ul.social-share li a:hover {
 }
 
 .search i {
-  color: #fff;
+  color: #000;
 }
 
 input.search-form{
@@ -237,7 +237,7 @@ input.search-form{
   border: 0 none;
   width: 60px;
   padding: 0 10px;
-  color: #FFF;
+  color: #000;
   -webkit-transition: all 400ms;
   -moz-transition: all 400ms;
   -ms-transition: all 400ms;
@@ -260,18 +260,21 @@ input.search-form:hover {
 .navbar-brand {
   padding: 0;
   margin:0;
+   border-bottom: 3px solid yellow;
 }
 
 .navbar {
   border-radius: 0;
   margin-bottom: 0;
-  background: #ffffff;
-  padding: 15px 0;
+  background: #fff;
+  padding: 2px 0;
   padding-bottom: 0;
+  
 }
 
  .navbar-nav{
-  margin-top: 12px;
+  margin-top: 1px;
+ 
  }
 
 .navbar-nav>li{
@@ -1070,11 +1073,11 @@ a.accordion-toggle  i{
 }
 
 #carousel-slider .carousel-control.left i {
-  left:-25px
+  left:-10px
 }
 
 #carousel-slider .carousel-control.right i {
-  right: -25px;
+  right: -10px;
 }
 
 #carousel-slider

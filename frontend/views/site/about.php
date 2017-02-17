@@ -39,11 +39,11 @@ $this->params['breadcrumbs'][] = $this->title;
 					   </div> 
 					</div>
 					
-					<a class="left carousel-control hidden-xs" href="#carousel-slider" data-slide="prev">
+					<a class="left carousel-control xs" href="#carousel-slider" data-slide="prev">
 						<i class="fa fa-angle-left"></i> 
 					</a>
 					
-					<a class=" right carousel-control hidden-xs"href="#carousel-slider" data-slide="next">
+					<a class=" right carousel-control xs"href="#carousel-slider" data-slide="next">
 						<i class="fa fa-angle-right"></i> 
 					</a>
 				</div> <!--/#carousel-slider-->

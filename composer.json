@@ -22,13 +22,12 @@
         "froala/yii2-froala-editor": "*",
         "kartik-v/yii2-widgets": "*",
         "2amigos/yii2-date-time-picker-widget": "~1.0",
-        "2amigos/yii2-tinymce-widget": "*",
         "kartik-v/yii2-widget-select2": "@dev",
         "phpoffice/phpexcel": "dev-develop",
         "cliff363825/yii2-kindeditor": "*",
-        "yiisoft/yii2-apidoc": "~2.1.0",
-        "kartik-v/yii2-export":"*",
-        "kartik-v/yii2-mpdf":"*"
+        "yiisoft/yii2-apidoc": "~2.1.0"
+   
+     
         
        
     },

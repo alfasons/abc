@@ -23,8 +23,6 @@ MainAsset::register($this);
 <?php $this->beginBody() ?>
 
    <header id="header">
-      
-
         <nav class="navbar navbar-inverse" >
             <div class="container">
                 <div class="navbar-header">
@@ -34,7 +32,7 @@ MainAsset::register($this);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo.png" alt="logo"></a>
+                    <a class="navbar-brand" href="<?php echo Yii::$app->urlManager->createUrl(['/site/index']); ?>"><img src="images/logo.png" alt="logo"></a>
                 </div>
 				
                 <div class="collapse navbar-collapse navbar-right">
@@ -65,7 +63,7 @@ MainAsset::register($this);
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">STUDENTS<i class="fa fa-angle-down"></i></a>
                             <ul class="dropdown-menu">
                                 <li><a href="blog-item.html">Student Cancil</a></li>
-                                <li><a href="pricing.html">Alumini</a></li>
+                                <li><a href="<?php echo Yii::$app->urlManager->createUrl(['/alumini/index']); ?>">Alumini</a></li>
                                 <li><a href="404.html">Games</a></li>
                                 <li><a href="shortcodes.html">Admission</a></li>
                             </ul>
@@ -75,7 +73,7 @@ MainAsset::register($this);
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-		
+	 
     </header><!--/header-->
     <div class="container">
        <?= Breadcrumbs::widget([
@@ -697,4 +695,3 @@ MainAsset::register($this);
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-

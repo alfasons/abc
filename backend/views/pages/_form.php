@@ -17,18 +17,20 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'subject')->textInput(['maxlength' => true]) ?>
     
-   <?php /* echo froala\froalaeditor\FroalaEditorWidget::widget([
-        'model'=>$model,
-        'attribute'=>'content',
-        'options'=>[
-          //  'id'=>'content',
-        ],
-        'ClientOption'=>[
-            'toolbarline'=>false,
-            'theme'=>'royal',//red,dark,gray,royal
-            'language'=>'en_gb',
-        ]
-    ]);; */?>
+        <?php echo froala\froalaeditor\FroalaEditorWidget::widget([
+    'model' => $model,
+    'attribute' => 'content',
+    'options'=>[// html attributes
+      
+    ],
+    'clientOptions'=>[
+        'toolbarInline'=> true,
+        'theme' =>'royal',//optional: dark, red, gray, royal
+        'language'=>'en_gb' // optional: ar, bs, cs, da, de, en_ca, en_gb, en_us ...
+    ]
+]);; ?>
+        
+
     
   <?= \cliff363825\kindeditor\KindEditorWidget::widget([
     'model' => $model,
@@ -50,7 +52,8 @@ use yii\widgets\ActiveForm;
     <div class="form-group">
         <?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
     </div>
-
+   
+ 
     <?php ActiveForm::end(); ?>
 
 </div>

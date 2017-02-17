@@ -11,18 +11,21 @@ use yii\widgets\ActiveForm;
 <div class="contents-form">
 
     <?php $form = ActiveForm::begin(); ?>
-          <?= \cliff363825\kindeditor\KindEditorWidget::widget([
+
+ 
+           <?= \cliff363825\kindeditor\KindEditorWidget::widget([
     'model' => $model,
     'attribute' => 'content_info',
     'options' => [], // html attributes
     'clientOptions' => [
         'width' => '886px',
-        'height' => '300px',
+        'height' => '250px',
         'themeType' => 'default', // optional: default, simple, qq
         'langType' => \cliff363825\kindeditor\KindEditorWidget::LANG_TYPE_EN, // optional: ar, en, ko, ru, zh-CN, zh-TW
         
     ],
 ]); ?>
+    
     <div class="col-md-6">
         <?= $form->field($model, 'content_name')->textInput(['maxlength' => true]) ?>
 
