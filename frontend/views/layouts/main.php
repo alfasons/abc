@@ -177,97 +177,51 @@ MainAsset::register($this);
 		
     </header><!--/header-->
  
-    <section id="main-slider" class="no-margin">
+      <section id="about-us">
          <div class="panel panel-default fixed-top ">
              <div class="panel-body " style="border: 1px solid black; background-color: #009933;">
-                 <div class="col-sm-8">
-                 <div class="carousel slide">
-            <ol class="carousel-indicators">
-                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
-                <li data-target="#main-slider" data-slide-to="1"></li>
-                <li data-target="#main-slider" data-slide-to="2"></li>
-            </ol>
-            <div class="carousel-inner">
+                 <div class="col-sm-7">
+                     	<!-- about us slider -->
+			<div id="about-slider">
+				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+					
 
-                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img1.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-6 xs animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img2.png" class="img-responsive">
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div><!--/.item-->
-
-                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
-                    <div class="container">
-                        <div class="row slide-margin">
-                            <div class="col-sm-6">
-                                <div class="carousel-content">
-                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
-                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
-                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
-                                </div>
-                            </div>
-                            <div class="col-sm-6  animation animated-item-4">
-                                <div class="slider-img">
-                                    <img src="images/slider/img3.png" class="img-responsive">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div><!--/.item-->
-            </div><!--/.carousel-inner-->
-        </div><!--/.carousel-->
-        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
-            <i class="fa fa-chevron-left"></i>
-        </a>
-        <a class="next hidden-xs" href="#main-slider" data-slide="next">
-            <i class="fa fa-chevron-right"></i>
-        </a>
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div>
+					   <div class="item">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					   <div class="item">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					</div>
+					
+					<a class="left carousel-control xs" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+					
+					<a class=" right carousel-control xs"href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+				</div> <!--/#carousel-slider-->
+			</div><!--/#about-slider-->
+			
+      
         </div>
-         <div class="col-sm-4"></div>
+         <div class="col-sm-5">
            <div class="accordion">
-                        yy
+               <br>
+               
+                       <h>NEWS</h>
                         <div class="panel-group" id="accordion1">
                           <div class="panel panel-default">
                             <div class="panel-heading active">
                               <h3 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
                                   Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
+                                  <i class="fa fa-angle-down pull-right"></i>
                                 </a>
                               </h3>
                             </div>
@@ -281,6 +235,7 @@ MainAsset::register($this);
                                         <div class="media-body">
                                              <h4>Adipisicing elit</h4>
                                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                             
                                         </div>
                                   </div>
                               </div>
@@ -294,7 +249,7 @@ MainAsset::register($this);
                               <h3 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
                                   Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
+                                  <i class="fa fa-angle-down pull-right"></i>
                                 </a>
                               </h3>
                             </div>
@@ -310,7 +265,7 @@ MainAsset::register($this);
                               <h3 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
                                   Lorem ipsum dolor sit amet
-                                  <i class="fa fa-angle-right pull-right"></i>
+                                  <i class="fa fa-angle-down pull-right"></i>
                                 </a>
                               </h3>
                             </div>
@@ -324,15 +279,30 @@ MainAsset::register($this);
                     </div>
              </div>
          </div>
-      
+      </div>
      
         
       
     </section><!--/#main-slider-->
-
-  
-
-          <?= $content?>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-2"> 
+                Most Visited sites
+                -------------------
+                -
+            
+            </div>
+            <div class="col-md-9">
+                
+                  <?= $content?>
+            </div>
+            <div class="col-md-1">
+              downloads
+            </div>
+            
+        </div>
+        
+    </div>
             
        <section id="services" class="service-item">
 	   <div class="container">

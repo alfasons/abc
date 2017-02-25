@@ -115,7 +115,7 @@ a:focus {
 }
 
 body > section {
-  
+  padding: 50px 0;
 }
 
 .center {
@@ -263,7 +263,7 @@ input.search-form:hover {
 }
 
 .navbar {
-  border-radius: 0px;
+  border-radius: 50px;
   margin-bottom: 2px;
   background:#009933;
   padding: 15px 0;
@@ -284,7 +284,7 @@ input.search-form:hover {
   padding: 5px 10px;
     margin: 0px ;
   border-radius: 3px;
-  color:#000000;
+  color:#fff;
   line-height: 24px;
   display: inline-block;
   font-family: sans-serif;
@@ -320,7 +320,7 @@ input.search-form:hover {
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu {
-  background-color: rgba(0.1,1,0,0.85);
+  background-color: rgba(0,0,0,0.67);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -340,7 +340,7 @@ input.search-form:hover {
 
 .navbar-inverse .navbar-nav .dropdown-menu > li > a {
   padding: 8px 15px;
-  color:#000;
+  color:#fff;
   font-family: sans-serif;
   font-weight: 600;
   font-size: 12px;
@@ -351,9 +351,9 @@ input.search-form:hover {
 .navbar-inverse .navbar-nav .dropdown-menu > li:hover > a,
 .navbar-inverse .navbar-nav .dropdown-menu > li:focus > a,
 .navbar-inverse .navbar-nav .dropdown-menu > li.active > a {
-    background-color:#333333;
+    background-color:  #fff;
   
-  color: #fff;
+  color: #000;
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu > li:last-child > a {
@@ -855,12 +855,12 @@ a.accordion-toggle  i{
 }
 
 .panel-heading.active a.accordion-toggle i{
-    background: #009933;
+    background:  #320b2f;
   color: #fff;
 }
 
 .panel-heading.active a.accordion-toggle.collapsed i{
-  background: #fff;
+  background: red;
   color: #fff;
 }
 
@@ -1022,7 +1022,7 @@ a.accordion-toggle  i{
 **************************/
 
 .about-us {
-  margin-top: 1px;
+  margin-top: 10px;
   margin-bottom: -10px;
 }
 
@@ -1073,11 +1073,11 @@ a.accordion-toggle  i{
 }
 
 #carousel-slider .carousel-control.left i {
-  left:-25px
+  left:-2px
 }
 
 #carousel-slider .carousel-control.right i {
-  right: -25px;
+  right: -2px;
 }
 
 #carousel-slider

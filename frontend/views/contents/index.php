@@ -6,8 +6,8 @@ $this->title = '';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 
-<div class="container">  
+ 
  <?= $p->content_info;?>    
-</div>
+
 
 

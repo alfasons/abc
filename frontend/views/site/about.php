@@ -7,15 +7,10 @@ use yii\helpers\Html;
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="site-about">
-   
-   
-       <section id="about-us">
-           <div class="container " style="border-width: 2px;">
-            
-			<div class="center wow fadeInDown">
+
+			<div class=" wow fadeInDown">
 				<h2>History of Chemolingot High School</h2>
-				<p class="lead">Boresha Sacco is a cooperative society located in Eldama Ravine<br> Its mainly constitutes the teachers and it aim is to refinance its members </p>
+				<p class="lead">Boresha Sacco is a cooperative society located in Eldama Ravine Its mainly constitutes the teachers and it aim is to refinance its members </p>
 			</div>
 			
 			<!-- about us slider -->
@@ -236,6 +231,4 @@ $this->params['breadcrumbs'][] = $this->title;
 			</div><!--section-->
 		</div><!--/.container-->
         </div>
-       
-       </section><!--/about-us-->
-</div>
+
