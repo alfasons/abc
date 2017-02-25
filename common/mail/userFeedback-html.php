@@ -12,5 +12,5 @@ use yii\helpers\Html;
     
     <p>This is very helpful to us.</p>
     
-    <p><strong>(MTech Limited :::: <?= date('d-m-Y  h:m:s')?>)</strong></p>
+    <p><strong>(Chemolingot High School :::: <?= date('d-m-Y  h:m:s')?>)</strong></p>
 </div>

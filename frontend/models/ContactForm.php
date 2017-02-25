@@ -4,6 +4,8 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
+use yii\db\ActiveRecord;
+
 
 
 /**
@@ -24,7 +26,7 @@ class ContactForm extends Model
      */
     public static function tablename()
     {
-        return 'contact';
+        return 'contactform';
     }
     public function rules()
     {
@@ -62,7 +64,7 @@ class ContactForm extends Model
             )
             ->setFrom([$supportEmail => Yii::$app->params['siteName']])
             ->setTo($supportEmail)
-            ->setSubject('MTech:' . $this->subject)
+            ->setSubject('Chemolingot High:' . $this->subject)
             ->send();
         $userSuccess = Yii::$app
             ->mailer
@@ -79,6 +81,7 @@ class ContactForm extends Model
             ->setTo($this->email)
             ->setSubject( Yii::$app->params['siteName'])
             ->send();
+      
         return $userSuccess && $adminSuccess;
     }
        

@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'content_name',
             'description',
             'subject',
-           // 'content_info:ntext',
+            'content_info:html',
             'edited_by',
             'date_created',
             'date_upadted',

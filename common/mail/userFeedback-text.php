@@ -8,5 +8,5 @@ Hello <?= $name ?>,
 
 <p>Thank you for conducting us. Will get in touch with you as soon as possible</p>
 
-<p>MTech Limited  <?= date('Y')?></p>
+<p>Chemolingot High School  <?= date('Y')?></p>
 

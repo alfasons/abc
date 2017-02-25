@@ -35,6 +35,8 @@ use yii\widgets\ActiveForm;
     </div>   
     <div class="col-md-6">
         <?= $form->field($model, 'date_created')->textInput() ?>
+         
+
 
         <?= $form->field($model, 'date_upadted')->textInput() ?>
         

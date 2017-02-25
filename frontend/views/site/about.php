@@ -8,12 +8,13 @@ $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+   
    
        <section id="about-us">
-        <div class="container">
+           <div class="container " style="border-width: 2px;">
+            
 			<div class="center wow fadeInDown">
-				<h2>About Boresha</h2>
+				<h2>History of Chemolingot High School</h2>
 				<p class="lead">Boresha Sacco is a cooperative society located in Eldama Ravine<br> Its mainly constitutes the teachers and it aim is to refinance its members </p>
 			</div>
 			
@@ -104,7 +105,7 @@ $this->params['breadcrumbs'][] = $this->title;
 			<!-- our-team -->
 			<div class="team">
 				<div class="center wow fadeInDown">
-					<h2>Boresha Team</h2>
+                                    <h2>Board of Governers</h2>
 					<p class="lead">This are our esteem experts,available 24/7 <br>Motto:  God bless the work of our hands so that we can strive for greater heights </p>
 				</div>
 

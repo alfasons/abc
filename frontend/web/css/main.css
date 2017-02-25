@@ -4,12 +4,12 @@
 /*************************
 *******Typography******
 **************************/
-
 body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
   line-height: 22px;
+  
 }
 
 h1,
@@ -115,7 +115,7 @@ a:focus {
 }
 
 body > section {
-  padding: 70px 0;
+  
 }
 
 .center {
@@ -263,11 +263,12 @@ input.search-form:hover {
 }
 
 .navbar {
-  border-radius: 0;
-  margin-bottom: 0;
-  background: #ffffff;
+  border-radius: 0px;
+  margin-bottom: 2px;
+  background:#009933;
   padding: 15px 0;
   padding-bottom: 0;
+  
 }
 
  .navbar-nav{
@@ -280,15 +281,16 @@ input.search-form:hover {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  padding: 5px 12px;
-    margin: 0 ;
+  padding: 5px 10px;
+    margin: 0px ;
   border-radius: 3px;
   color:#000000;
-  line-height: 14px;
+  line-height: 24px;
   display: inline-block;
   font-family: sans-serif;
   font-weight: 700;
   font-size: 12px;
+ 
   
 }
 
@@ -318,7 +320,7 @@ input.search-form:hover {
 }
 
 .navbar-inverse .navbar-nav .dropdown-menu {
-  background-color: rgba(0.001,0,0,0.65);
+  background-color: rgba(0.1,1,0,0.85);
   -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -373,9 +375,10 @@ input.search-form:hover {
 *******Home Page******
 **************************/
 
-
 #main-slider {
-  position: relative;
+ position: relative;
+ margin-top: 40px;
+
 }
 
 .no-margin {
@@ -384,11 +387,11 @@ input.search-form:hover {
 }
 
 #main-slider .carousel .carousel-content {
-  margin-top: 150px;
+  margin-top: -130px;
 }
 
 #main-slider .carousel .slide-margin{
-  margin-top: 60px;
+  margin-top: 140px;
 }
 
 #main-slider .carousel h2 {
@@ -399,7 +402,7 @@ input.search-form:hover {
 }
 
 #main-slider .carousel .btn-slide {
-  padding: 1px 20px;
+  padding: 8px 20px;
   background:#00cc33;
   color: #fff;
   border-radius: 4px;
@@ -417,13 +420,13 @@ input.search-form:hover {
   background-position: 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  left: 0 !important;
+  left: 0px !important;
   opacity: 0;
   top: 0;
   position: absolute;
   width: 100%;
   display: block !important;
-  height: 650px;
+  height: 300px;
   -webkit-transition: opacity ease-in-out 500ms;
   -moz-transition: opacity ease-in-out 500ms;
   -o-transition: opacity ease-in-out 500ms;
@@ -451,7 +454,7 @@ input.search-form:hover {
   background-color:#666666;
   color: #fff;
   display: block;
-  margin-top: -25px;
+  margin-top: -5px;
   height: 40px;
   line-height: 40px;
   width: 40px;
@@ -467,17 +470,17 @@ input.search-form:hover {
 }
 
 #main-slider .prev {
-  left: 10px;
+  left: 25px;
 }
 
 #main-slider .next {
-  right: 10px;
+  right: 25px;
 }
 
 #main-slider .carousel-indicators li {
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: transparent;
   margin: 0 15px 0 0;
   position: relative;
 }
@@ -549,7 +552,7 @@ input.search-form:hover {
 
 #feature {
   background: #f2f2f2;
-  padding-bottom: 40px;
+  padding-bottom: 42px;
 }
 
 .features{
@@ -852,12 +855,12 @@ a.accordion-toggle  i{
 }
 
 .panel-heading.active a.accordion-toggle i{
-  background: #ffff;
+    background: #009933;
   color: #fff;
 }
 
 .panel-heading.active a.accordion-toggle.collapsed i{
-  background: #ffff;
+  background: #fff;
   color: #fff;
 }
 
@@ -868,7 +871,7 @@ a.accordion-toggle  i{
 
 .nav-tabs{
   border-bottom: transparent;
-  border-right: 1px solid #e6e6e6;
+  border-right: 1px solid red;
 }
 
 .nav-tabs>li>a {
@@ -1533,10 +1536,11 @@ ul.social_icons li  a i{
 }
 
 .footer {
-  background: none repeat scroll 0 0 #2E2E2E;
+  background: none repeat scroll red;
   border-top: 5px solid #C52D2F;
   height: 84px;
   margin-top: 110px;
+  color: red
 }
 
 .footer_left {
@@ -2505,7 +2509,7 @@ shortcodes page css
 }
 
 #bottom ul li a:hover {
-  color: #ffff;
+  color: #fff;
 }
 
 #bottom .widget {
@@ -2524,7 +2528,7 @@ shortcodes page css
 }
 
 #footer a:hover {
-  color: #ffff;
+  color: #fff;
 }
 
 #footer ul {

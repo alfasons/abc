@@ -19,6 +19,7 @@ class MainAsset extends AssetBundle
         'css/prettyPhoto.css',
         'css/main.css',
         'css/responsive.css',
+        'css/jsor.css',
       
 
            ];
@@ -34,8 +35,8 @@ class MainAsset extends AssetBundle
     
     ];
     public $depends = [
-      // 'yii\web\YiiAsset',
-      // 'yii\bootstrap\BootstrapAsset',
+   // 'yii\web\YiiAsset',
+    //  'yii\bootstrap\BootstrapAsset',
     ];
 }
 

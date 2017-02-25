@@ -2,28 +2,34 @@
 
 /* @var $this \yii\web\View */
 /* @var $content string */
-use frontend\assets\MainAsset;
 use yii\helpers\Html;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
+use frontend\assets\MainAsset;
 use common\widgets\Alert;
+
 
 MainAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
-<!DOCTYPE html>
-<html lang="<?= Yii::$app->language ?>">
-<head>
-    <meta charset="<?= Yii::$app->charset ?>">
+   <!DOCTYPE html>
+ <html lang="<?= Yii::$app->language ?>">
+<head>  
+   <meta charset="<?= Yii::$app->charset ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <?= Html::csrfMetaTags() ?>
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
+   
+   
+
 </head>
 <body class="homepage">
 <?php $this->beginBody() ?>
-
-   <header id="header">
-        <nav class="navbar navbar-inverse navbar-fixed-top" >
+    <header id="header" >
+        
+            <nav class="navbar navbar-inverse navbar-fixed-top" >
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -37,7 +43,7 @@ MainAsset::register($this);
 				
                 <div class="collapse navbar-collapse navbar-right">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="<?php echo Yii::$app->urlManager->createUrl(['/site/index']); ?>">HOME</a></li>
+                        <li class=""><a href="<?php echo Yii::$app->urlManager->createUrl(['/site/index']); ?>">HOME</a></li>
                         <li><a href="<?php echo Yii::$app->urlManager->createUrl(['/site/about']); ?>">ABOUT US</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">ADMINISTRATION<i class="fa fa-angle-down"></i></a>
@@ -73,18 +79,258 @@ MainAsset::register($this);
                 </div>
             </div><!--/.container-->
         </nav><!--/nav-->
-	 
+        
+              
+                        <?php
+                        /*
+          NavBar::begin([
+        'brandLabel' => '<img src="images/logo.png" alt="logo">',
+        'brandUrl' => Yii::$app->homeUrl,
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
+  
+    $menuItems = [
+        ['label' => 'HOME', 'url' => ['/site/index']],
+        ['label' => 'ABOUT', 'url' => ['/site/about']],
+        ['label'=>'ADMINISTRATION',
+            'url'=>['contents/index'],
+                       'options'=>['class'=>'dropdown-toggle'],
+
+            'template' => '<a href="{url}" class="dropdown-menu">{label}</a>',
+
+            'items' => [
+
+                ['label' => 'Principal ', 'url' => ['contents/index']],
+                ['label' => 'Board Of Management', 'url' => ['contents/bog']],
+                ['label' => 'Strategic Plans ', 'url' => ['contents/strategics']],
+                ['label' => 'Teaching Staff', 'url' => ['contents/staff']],
+                ['label' => 'PTA', 'url' => ['contents/pta']],
+                ['label' => 'Support Staff', 'url' => ['contents/support']],
+                       ]
+        ],
+        ['label'=>'ACADEMICS',
+            'url'=>['#'],
+                       'options'=>['class'=>'dropdown'],
+
+            'template' => '<a href="{url}" class="href_class">{label}</a>',
+
+            'items' => [
+
+                ['label' => 'Departments', 'url' => ['#']],
+                ['label' => 'Congresses', 'url' => ['#']],
+                ['label' => 'Results ', 'url' => ['#']],
+                ['label' => 'KCSE', 'url' => ['#']],
+            ]
+
+        ],
+        ['label'=>'STUDENTS',
+            'url'=>['#'],
+                       'options'=>['class'=>'dropdown-toggle'],
+
+            'template' => '<a href="{url}" class="href_class">{label}</a>',
+
+            'items' => [
+                '<ul class="dropdown-menu">',
+                ['label' => 'Student Cancil', 'url' => ['#']],
+                ['label' => 'Alumini', 'url' => ['#']],
+                ['label' => 'Games', 'url' => ['#']],
+                ['label' => 'Admissions', 'url' => ['#']],
+                ' </ul>'
+            ]
+
+            ],
+        ['label'=>'CONTACT US','url'=>['/site/contact']],
+        
+        
+    ];
+    
+    
+
+  /*
+ only admin  signs from backend and manages the files at the backend
+    if (Yii::$app->user->isGuest) {
+        $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
+        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+    } else {
+        $menuItems[] = '<li>'
+            . Html::beginForm(['/site/logout'], 'post')
+            . Html::submitButton(
+                'Logout (' . Yii::$app->user->identity->username . ')',
+                ['class' => 'btn btn-link logout']
+            )
+            . Html::endForm()
+            . '</li>';
+    }
+*/
+   /* echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right'],
+        'items' => $menuItems,
+    ]);
+     
+    NavBar::end();
+    */
+    ?>
+    
+          
+		
     </header><!--/header-->
  
-  
+    <section id="main-slider" class="no-margin">
+         <div class="panel panel-default fixed-top ">
+             <div class="panel-body " style="border: 1px solid black; background-color: #009933;">
+                 <div class="col-sm-8">
+                 <div class="carousel slide">
+            <ol class="carousel-indicators">
+                <li data-target="#main-slider" data-slide-to="0" class="active"></li>
+                <li data-target="#main-slider" data-slide-to="1"></li>
+                <li data-target="#main-slider" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
 
-   <div class="container" >
-      <br><br><br><br><br>
-       <?= Breadcrumbs::widget([
-            'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
-        ]) ?>
-        <?= Alert::widget() ?>       
-    </div>
+                <div class="item active" style="background-image: url(images/slider/bg1.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img1.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url(images/slider/bg2.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6 xs animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img2.png" class="img-responsive">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/.item-->
+
+                <div class="item" style="background-image: url(images/slider/bg3.jpg)">
+                    <div class="container">
+                        <div class="row slide-margin">
+                            <div class="col-sm-6">
+                                <div class="carousel-content">
+                                    <h1 class="animation animated-item-1">Lorem ipsum dolor sit amet consectetur adipisicing elit</h1>
+                                    <h2 class="animation animated-item-2">Accusantium doloremque laudantium totam rem aperiam, eaque ipsa...</h2>
+                                    <a class="btn-slide animation animated-item-3" href="#">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-sm-6  animation animated-item-4">
+                                <div class="slider-img">
+                                    <img src="images/slider/img3.png" class="img-responsive">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--/.item-->
+            </div><!--/.carousel-inner-->
+        </div><!--/.carousel-->
+        <a class="prev hidden-xs" href="#main-slider" data-slide="prev">
+            <i class="fa fa-chevron-left"></i>
+        </a>
+        <a class="next hidden-xs" href="#main-slider" data-slide="next">
+            <i class="fa fa-chevron-right"></i>
+        </a>
+        </div>
+         <div class="col-sm-4"></div>
+           <div class="accordion">
+                        yy
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="images/accordion1.png">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Adipisicing elit</h4>
+                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                       
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseFour1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseFour1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+                        </div><!--/#accordion1-->
+                    </div>
+             </div>
+         </div>
+      
+     
+        
+      
+    </section><!--/#main-slider-->
+
+  
 
           <?= $content?>
             
@@ -286,7 +532,7 @@ MainAsset::register($this);
 
                 </div><!--/.col-sm-6-->
 
-                <div class="col-sm-6 wow fadeInDown">
+                <div class="col-md-6 wow fadeInDown">
                     <div class="accordion">
                         <h2>Why People like us?</h2>
                         <div class="panel-group" id="accordion1">

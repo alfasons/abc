@@ -5,5 +5,5 @@ return [
     'user.passwordResetTokenExpire' => 3600,
     
     'supportEmail' => 'kibchirchir@gmail.com',
-    'siteName' => 'MTech Limited',
+    'siteName' => 'Chemolingot High School',
 ];

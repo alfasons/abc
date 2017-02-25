@@ -10,3 +10,5 @@ Hello <?= $user->username ?>,
 Follow the link below to reset your password:
 
 <?= $resetLink ?>
+
+<p>(Chemolingot High School :::: <?= date('d-m-Y  h:m:s')?>)</p>
