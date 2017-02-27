@@ -7,7 +7,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
  <div class="row">
-    <h2 class="center"> HISTORY OF CHEMOLINGOT HIGH SCHOOL.</h2>
+    <h2 class="center">OFFICICE OF THE PRINCIPAL.</h2>
 	
 			<!-- about us slider -->
                         <div id="about-slider" style="border: 1px solid black; border-radius: 10px; top: -40px" class="col-md-offset-1 col-md-9">

@@ -8,7 +8,7 @@ $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
-    <h2 class="center"> HISTORY OF CHEMOLINGOT HIGH SCHOOL.</h2>
+    <h2 class="center"> ABOUT US.</h2>
 	
 			<!-- about us slider -->
                         <div id="about-slider" style="border: 1px solid black; border-radius: 10px; top: -40px" class="col-md-offset-1 col-md-9">
@@ -48,6 +48,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
 			  </div>
                         <div class="row">
+                             <h2 class="center"> HISTORY OF CHEMOLINGOT HIGH.</h2>
                     I wish to submit my application for the above mention post, which I came across on your website.I recently graduated with second class honors (upper division) in Bachelor of Science in Information Technology from Jomo Kenyatta University of Agriculture and Technology in November last year. 
                   I had a privilege to work at MTech Limited company last year and in 2015.Where I had the chance to work as an IT support in the technical department. This opportunity gave me the chance to gain excellent skills in the IT sector, I have indicated some of the duties and achievements while at the company in my curriculum vitae attached. 
                   Given the expertise and experience that your company has, I wish to ask for the opportunity to pursue my career through the unique opportunity in PWC. I believe the company’s motivated environment would provide me with an invaluable experience and that my passion and skills would make me a valuable asset to your company. I am ready, willing and confident to work and extra mile and portray excellence to my best. 

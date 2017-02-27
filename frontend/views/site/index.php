@@ -60,6 +60,8 @@ $this->params['breadcrumbs'][] = $this->title;
                      <h2 class="center">What we DO.</h2>
                      <p>
                          Given the expertise and experience that your company has, I wish to ask for the opportunity to pursue my career through the unique opportunity in PWC. I believe the company’s motivated environment would provide me with an invaluable experience and that my passion and skills would make me a valuable asset to your company. I am ready, willing and confident to work and extra mile and portray excellence to my best. 
+                     <a class="btn btn-default" href="<?php echo Yii::$app->urlManager->createUrl(['/site/about']); ?>">Read More.... &raquo;</a></p>
+                     
                      </p>
  </div>
 

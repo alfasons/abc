@@ -191,13 +191,11 @@ MainAsset::register($this);
         <div class="row">
             <div class="col-md-2 "> 
                 <br> <br> <br>
-                <div class="panel panel-success">
-                            <div class="panel-heading">
-                                Most visited
-                            </div>
+               
+                           
                             <div class="panel-body">
-                                <button class="btn btn-success bt-small" data-toggle="modal" data-target="#myModal">
-                                    Notice
+                                <button class="btn btn-danger bt-small" style=" border-radius:50% "data-toggle="modal" data-target="#myModal">
+                                    New Notice
                                 </button>
                               
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -218,28 +216,9 @@ MainAsset::register($this);
                                     </div>
                                 </div>
                                   
-                                   <button class="btn btn-success bt-small" data-toggle="modal" data-target="#myModal">
-                                    Notice
-                                </button>
-                                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                                                <h4 class="modal-title" id="myModalLabel">Modal title</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                <button type="button" class="btn btn-success">Save changes</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                                
                             </div>
-                        </div>
+                       
                    
                 
 
@@ -251,11 +230,25 @@ MainAsset::register($this);
             <div class="col-md-2">
                
                 <br>  <br>
-                 <hr>
+                <hr>
+                <p style="  margin: 0 0 10px;
+  border-bottom: 1px dashed #B6B6B6;">
+                 
               downloads
-              Most Visited sites
-                -------------------
-                -
+              
+                </p>
+                               <p style="  margin: 0 0 10px;
+  border-bottom: 1px dashed #B6B6B6;">
+                 
+              downloads
+              
+                </p>               <p style="  margin: 0 0 10px;
+  border-bottom: 1px dashed #B6B6B6;">
+                 
+              downloads
+              
+                </p>
+                <hr>
                                <div class="x_content">
 
                   <p>Regular notifications</p>
@@ -450,13 +443,6 @@ MainAsset::register($this);
 
       <section id="about-us">
         <div class="container">
-			<div class="center wow fadeInDown">
-				<h2>About Boresha</h2>
-				<p class="lead">Boresha Sacco is a cooperative society located in Eldama Ravine<br> Its mainly constitutes the teachers and it aim is to refinance its members </p>
-			</div>
-			
-			
-			
 			<!-- Our Skill -->
 			<div class="skill-wrap clearfix">
 			
@@ -511,7 +497,7 @@ MainAsset::register($this);
 			<!-- our-team -->
 			<div class="team">
 				<div class="center wow fadeInDown">
-					<h2>Boresha Team</h2>
+					<h2>Chemolingot High School Team</h2>
 					<p class="lead">This are our esteem experts,available 24/7 <br>Motto:  God bless the work of our hands so that we can strive for greater heights </p>
 				</div>
 
@@ -709,11 +695,11 @@ MainAsset::register($this);
                         <h2>Testimonials</h2>
                          <div class="media testimonial-inner">
                             <div class="pull-left">
-                                <img class="img-responsive img-circle" src="images/testimonials1.png">
+                                <img class="img-responsive img-circle" src="images/alfa.png" alt="" height="70" width="70">
                             </div>
                             <div class="media-body">
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt</p>
-                                <span><strong>-John Doe/</strong> Director of corlate.com</span>
+                                <span><strong>-Alfason Chirchir/</strong> Director of Alfa Technology Limited</span>
                             </div>
                          </div>
 
