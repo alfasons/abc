@@ -20,8 +20,12 @@ class MainAsset extends AssetBundle
         'css/main.css',
         'css/responsive.css',
         'css/jsor.css',
+        
+        'css/pnotify.css',
+        'css/pnotify.buttons.css',
+        'css/pnotify.nonblock.css',
       
-
+  
            ];
     public $js = [
           //  'js/jquery.js',
@@ -31,6 +35,12 @@ class MainAsset extends AssetBundle
             'js/main.js',
             'js/wow.min.js',
         
+           // 'js/jpnotify.js',
+           // 'js/pnotify.buttons.js',
+          //  'js/pnotify.nonblock.js',
+        
+       
+       
          
     
     ];

@@ -6,11 +6,11 @@ use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
-use frontend\assets\MainAsset;
+use frontend\assets\WelcomeAsset;
 use common\widgets\Alert;
 
 
-MainAsset::register($this);
+WelcomeAsset::register($this);
 ?>
 <?php $this->beginPage() ?>
    <!DOCTYPE html>
@@ -85,6 +85,7 @@ MainAsset::register($this);
                     </ul>
                 </div>
             </div><!--/.container-->
+            
         </nav><!--/nav-->
         
               
@@ -183,14 +184,123 @@ MainAsset::register($this);
           
 		
     </header><!--/header-->
-    
- 
-    <div class="container"style="margin-top: 91px;top: 0px;border: 1px solid  green;"
+
+    <div style="border: 1px solid green;">
+        <div class="container">
+   
+   <div  style="margin-top: 89px;top: 0px">
+         <div class="panel panel-default ">
+             <div class="panel-body " style=" background-color:white">
+                 <div class="col-sm-6">
+                     	<!-- about us slider -->
+			<div id="about-slider">
+				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
+					
+
+					<div class="carousel-inner">
+						<div class="item active">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div>
+					   <div class="item">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					   <div class="item">
+							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+					   </div> 
+					</div>
+					
+					<a class="left carousel-control xs" href="#carousel-slider" data-slide="prev">
+						<i class="fa fa-angle-left"></i> 
+					</a>
+					
+					<a class=" right carousel-control xs"href="#carousel-slider" data-slide="next">
+						<i class="fa fa-angle-right"></i> 
+					</a>
+				</div> <!--/#carousel-slider-->
+			</div><!--/#about-slider-->
+			
+      
+        </div>
+         <div class="col-sm-6">
+        
+               <div class="accordion">
+                      
+                        <div class="panel-group" id="accordion1">
+                          <div class="panel panel-default">
+                            <div class="panel-heading active">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+
+                            <div id="collapseOne1" class="panel-collapse collapse in">
+                              <div class="panel-body">
+                                  <div class="media accordion-inner">
+                                        <div class="pull-left">
+                                            <img class="img-responsive" src="images/accordion1.png">
+                                        </div>
+                                        <div class="media-body">
+                                             <h4>Adipisicing elit</h4>
+                                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore</p>
+                                        </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseTwo1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="panel panel-default">
+                            <div class="panel-heading">
+                              <h3 class="panel-title">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree1">
+                                  Lorem ipsum dolor sit amet
+                                  <i class="fa fa-angle-right pull-right"></i>
+                                </a>
+                              </h3>
+                            </div>
+                            <div id="collapseThree1" class="panel-collapse collapse">
+                              <div class="panel-body">
+                                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor.
+                              </div>
+                            </div>
+                          </div>
+
+
+                        </div><!--/#accordion1-->
+                    </div>
+             </div>
+         </div>
+      </div>
+     
+        
+       </div>
+    </div><!--/#main-slider-->
+
+      
+    <div class="container" >
               
                       
         <div class="row">
             <div class="col-md-2 "> 
-                <br> <br> <br>
+                
                 <div class="panel panel-success">
                             <div class="panel-heading">
                                 Most visited
@@ -199,7 +309,6 @@ MainAsset::register($this);
                                 <button class="btn btn-success bt-small" data-toggle="modal" data-target="#myModal">
                                     Notice
                                 </button>
-                              
                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                         <div class="modal-content">
@@ -245,13 +354,9 @@ MainAsset::register($this);
 
             </div>
             <div class="col-md-8">
-                
                   <?= $content?>
             </div>
             <div class="col-md-2">
-               
-                <br>  <br>
-                 <hr>
               downloads
               Most Visited sites
                 -------------------
@@ -362,7 +467,7 @@ MainAsset::register($this);
         </div>
         
     </div>
-            
+       </div>     
        <section id="services" class="service-item">
 	   <div class="container">
             <div class="center wow fadeInDown">

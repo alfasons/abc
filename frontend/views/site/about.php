@@ -7,14 +7,11 @@ use yii\helpers\Html;
 $this->title = 'About';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-
-			<div class=" wow fadeInDown">
-				<h2>History of Chemolingot High School</h2>
-				<p class="lead">Boresha Sacco is a cooperative society located in Eldama Ravine Its mainly constitutes the teachers and it aim is to refinance its members </p>
-			</div>
-			
+<div class="row">
+    <h2 class="center"> HISTORY OF CHEMOLINGOT HIGH SCHOOL.</h2>
+	
 			<!-- about us slider -->
-			<div id="about-slider">
+                        <div id="about-slider" style="border: 1px solid black; border-radius: 10px; top: -40px" class="col-md-offset-1 col-md-9">
 				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 				  	<ol class="carousel-indicators visible-xs">
@@ -26,6 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 					<div class="carousel-inner">
 						<div class="item active">
 							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
+                                                        
 					   </div>
 					   <div class="item">
 							<img src="images/slider_one.jpg" class="img-responsive" alt=""> 
@@ -44,191 +42,31 @@ $this->params['breadcrumbs'][] = $this->title;
 					</a>
 				</div> <!--/#carousel-slider-->
 			</div><!--/#about-slider-->
-			
-			
-			<!-- Our Skill -->
-			<div class="skill-wrap clearfix">
-			
-				<div class="center wow fadeInDown">
-					<h2>Our Skill</h2>
-                                        <p class="lead">Meet our professional team, from different fields, equiped with everthing<br> Ready to serve you with the best of their abilility</p>
-				</div>
-				
-				<div class="row">
-		
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="joomla-skill">                                   
-								<p><em>85%</em></p>
-								<p>Guaranteed</p>
-							</div>
-						</div>
-					</div>
-					
-					 <div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="html-skill">                                  
-								<p><em>95%</em></p>
-								<p>Exallent</p>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="900ms">
-							<div class="css-skill">                                    
-								<p><em>80%</em></p>
-								<p>speed</p>
-							</div>
-						</div>
-					</div>
-					
-					 <div class="col-sm-3">
-						<div class="sinlge-skill wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="1200ms">
-							<div class="wp-skill">
-								<p><em>90%</em></p>
-								<p>Efficiency</p>                                     
-							</div>
-						</div>
-					</div>
-					
-				</div>
+                        <div class="col-md-2">
+                            
+                            
+                        </div>
+			  </div>
+                        <div class="row">
+                    I wish to submit my application for the above mention post, which I came across on your website.I recently graduated with second class honors (upper division) in Bachelor of Science in Information Technology from Jomo Kenyatta University of Agriculture and Technology in November last year. 
+                  I had a privilege to work at MTech Limited company last year and in 2015.Where I had the chance to work as an IT support in the technical department. This opportunity gave me the chance to gain excellent skills in the IT sector, I have indicated some of the duties and achievements while at the company in my curriculum vitae attached. 
+                  Given the expertise and experience that your company has, I wish to ask for the opportunity to pursue my career through the unique opportunity in PWC. I believe the company’s motivated environment would provide me with an invaluable experience and that my passion and skills would make me a valuable asset to your company. I am ready, willing and confident to work and extra mile and portray excellence to my best. 
+                  Attached is my curriculum vitae and other testimonials. 
+                   I wish to submit my application for the above mention post, which I came across on your website.I recently graduated with second class honors (upper division) in Bachelor of Science in Information Technology from Jomo Kenyatta University of Agriculture and Technology in November last year. 
+                  I had a privilege to work at MTech Limited company last year and in 2015.Where I had the chance to work as an IT support in the technical department. This opportunity gave me the chance to gain excellent skills in the IT sector, I have indicated some of the duties and achievements while at the company in my curriculum vitae attached. 
+                  Given the expertise and experience that your company has, I wish to ask for the opportunity to pursue my career through the unique opportunity in PWC. I believe the company’s motivated environment would provide me with an invaluable experience and that my passion and skills would make me a valuable asset to your company. I am ready, willing and confident to work and extra mile and portray excellence to my best. 
+                  Attached is my curriculum vitae and other testimonials. 
+                   I wish to submit my application for the above mention post, which I came across on your website.I recently graduated with second class honors (upper division) in Bachelor of Science in Information Technology from Jomo Kenyatta University of Agriculture and Technology in November last year. 
+                  I had a privilege to work at MTech Limited company last year and in 2015.Where I had the chance to work as an IT support in the technical department. This opportunity gave me the chance to gain excellent skills in the IT sector, I have indicated some of the duties and achievements while at the company in my curriculum vitae attached. 
+                  Given the expertise and experience that your company has, I wish to ask for the opportunity to pursue my career through the unique opportunity in PWC. I believe the company’s motivated environment would provide me with an invaluable experience and that my passion and skills would make me a valuable asset to your company. I am ready, willing and confident to work and extra mile and portray excellence to my best. 
+                  Attached is my curriculum vitae and other testimonials. 
+
+
+                  Thank you.                                                                     
+                  Yours faithfully,  wifidoisdids 
+
+ </div>
+
 	
-            </div><!--/.our-skill-->
 			
-
-			<!-- our-team -->
-			<div class="team">
-				<div class="center wow fadeInDown">
-                                    <h2>Board of Governers</h2>
-					<p class="lead">This are our esteem experts,available 24/7 <br>Motto:  God bless the work of our hands so that we can strive for greater heights </p>
-				</div>
-
-				<div class="row clearfix">
-					<div class="col-md-4 col-sm-6">	
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left">
-                                                                    <a href="#"><img class="media-object img-bordered" src="images/alfa.png "height="150" width="170" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>CHIRCHIR K.</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">System & Web </a></li>
-										<li class="btn"><a href="#">Graphics</a></li>
-										<li class="btn"><a href="#">Bootstrap</a></li>
-									</ul>
-									
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div><!--/.media -->
-							<p>Chirchir K Alfason is a  holder BSC Information Technology from JKUAT,with skills and experience in both web design and  system development. He is also the founder of Alfasons Limited Company, one of the fastest growing IT company in Kenya.He also has exprience in firm wireframe in his field of experties. </p>
-						</div>
-					</div><!--/.col-lg-4 -->
-					
-					
-					<div class="col-md-4 col-sm-6 col-md-offset-2">	
-						<div class="single-profile-top wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="300ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man2.jpg" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div><!--/.media -->
-							<p>Jhon Doe is a  holder BSC Information Technology from JKUAT,with skills and experience in both web design and  system development. He is also the founder of Alfasons Limited Company, one of the fastest growing IT company in Kenya.He also has exprience in firm wireframe in his field of experties. </p>
-						</div>
-					</div><!--/.col-lg-4 -->					
-				</div> <!--/.row -->
-				<div class="row team-bar">
-					<div class="first-one-arrow hidden-xs">
-						<hr>
-					</div>
-					<div class="first-arrow hidden-xs">
-						<hr> <i class="fa fa-angle-up"></i>
-					</div>
-					<div class="second-arrow hidden-xs">
-						<hr> <i class="fa fa-angle-down"></i>
-					</div>
-					<div class="third-arrow hidden-xs">
-						<hr> <i class="fa fa-angle-up"></i>
-					</div>
-					<div class="fourth-arrow hidden-xs">
-						<hr> <i class="fa fa-angle-down"></i>
-					</div>
-				</div> <!--skill_border-->       
-
-				<div class="row clearfix">   
-					<div class="col-md-4 col-sm-6 col-md-offset-2">	
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man3.jpg" alt=""></a>
-								</div>
-
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-								</div>
-							</div><!--/.media -->
-							<p>Jhon Doe is a  holder BSC Information Technology from JKUAT,with skills and experience in both web design and  system development. He is also the founder of Alfasons Limited Company, one of the fastest growing IT company in Kenya.He also has exprience in firm wireframe in his field of experties. </p>
-						</div>
-					</div>
-					<div class="col-md-4 col-sm-6 col-md-offset-2">
-						<div class="single-profile-bottom wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="600ms">
-							<div class="media">
-								<div class="pull-left">
-									<a href="#"><img class="media-object" src="images/man4.jpg" alt=""></a>
-								</div>
-								<div class="media-body">
-									<h4>Jhon Doe</h4>
-									<h5>Founder and CEO</h5>
-									<ul class="tag clearfix">
-										<li class="btn"><a href="#">Web</a></li>
-										<li class="btn"><a href="#">Ui</a></li>
-										<li class="btn"><a href="#">Ux</a></li>
-										<li class="btn"><a href="#">Photoshop</a></li>
-									</ul>
-									<ul class="social_icons">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li> 
-										<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									</ul>
-							</div><!--/.media -->
-							<p>Jhon Doe is a  holder BSC Information Technology from JKUAT,with skills and experience in both web design and  system development. He is also the founder of Alfasons Limited Company, one of the fastest growing IT company in Kenya.He also has exprience in firm wireframe in his field of experties. </p>
-						</div>
-					</div>
-				</div>	<!--/.row-->
-			</div><!--section-->
-		</div><!--/.container-->
-        </div>
 

@@ -8,6 +8,7 @@ body {
   background: #fff;
   font-family: 'Open Sans', sans-serif;
   color:#4e4e4e;
+
   line-height: 22px;
   
 }
@@ -25,7 +26,7 @@ h6 {
 
 h1{
   font-size: 40px;
-  color:#fff;
+ color:#4e4e4e;
 }
 
 h2{
@@ -63,7 +64,7 @@ hr {
 
 .btn-primary {
   padding: 8px 20px;
-  background: #fff;
+  background: #2D7DA4;
   color: #fff;
   border-radius: 4px;
   border:none;
@@ -263,7 +264,7 @@ input.search-form:hover {
 }
 
 .navbar {
-  border-radius: 50px;
+  border-radius: 0px;
   margin-bottom: 2px;
   background:#009933;
   padding: 15px 0;
@@ -2394,7 +2395,7 @@ ul.sidebar-gallery {
 }
 
 .post_reply_comments h1 a:hover{
-  color:#ffff;
+  color:#fff;
 }
 
 .post_reply_comments h4{
