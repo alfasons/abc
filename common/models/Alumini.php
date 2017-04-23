@@ -8,12 +8,12 @@ use Yii;
  * This is the model class for table "alumini".
  *
  * @property integer $id
- * @property integer $full_name
- * @property string $mobile_no
- * @property string $email_address
- * @property integer $gender
+ * @property string $full_name
  * @property integer $adm_no
- * @property integer $year_completed
+ * @property string $gender
+ * @property integer $mobile_no
+ * @property string $email_address
+ * @property string $year
  */
 class Alumini extends \yii\db\ActiveRecord
 {
@@ -31,10 +31,12 @@ class Alumini extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['full_name', 'mobile_no', 'email_address', 'gender', 'adm_no', 'year_completed'], 'required'],
-            [['full_name', 'gender', 'adm_no', 'year_completed'], 'integer'],
-            [['mobile_no'], 'string', 'max' => 20],
-            [['email_address'], 'string', 'max' => 100],
+            [['full_name', 'adm_no', 'gender', 'mobile_no', 'email_address', 'year'], 'required'],
+            [['adm_no', 'mobile_no'], 'integer'],
+            [['full_name'], 'string', 'max' => 255],
+            [['gender'], 'string', 'max' => 100],
+            [['email_address'], 'string', 'max' => 200],
+            [['year'], 'string', 'max' => 20],
         ];
     }
 
@@ -46,11 +48,11 @@ class Alumini extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'full_name' => 'Full Name',
+            'adm_no' => 'Adm No',
+            'gender' => 'Gender',
             'mobile_no' => 'Mobile No',
             'email_address' => 'Email Address',
-            'gender' => 'Gender',
-            'adm_no' => 'Adm No',
-            'year_completed' => 'Year Completed',
+            'year' => 'Year',
         ];
     }
 }

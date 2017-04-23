@@ -4,7 +4,7 @@ namespace backend\controllers;
 
 use Yii;
 use common\models\Alumini;
-use common\models\search\AluminiSearch;
+use common\models\search\SearchAlumini;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -35,7 +35,7 @@ class AluminiController extends Controller
      */
     public function actionIndex()
     {
-        $searchModel = new AluminiSearch();
+        $searchModel = new SearchAlumini();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

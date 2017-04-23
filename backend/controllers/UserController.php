@@ -9,26 +9,25 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\web\UploadedFile;
 use yii\web\ForbiddenHttpException;
 
 /**
  * UserController implements the CRUD actions for User model.
  */
-class UserController extends Controller
-{
+class UserController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
-                            'access' => [
+            'access' => [
                 'class' => AccessControl::className(),
-             //  'only'=>['signup'],
-
+                //  'only'=>['signup'],
                 'rules' => [
                     [
-                        'actions' => ['logout', 'index','create','update','view','delete'],
+                        'actions' => ['logout', 'index', 'create', 'update', 'view', 'delete'],
                         //'actions'=>['signup'],
                         'allow' => true,
                         'roles' => ['@'],
@@ -48,17 +47,15 @@ class UserController extends Controller
      * Lists all User models.
      * @return mixed
      */
-    public function actionIndex()
-    {
+    public function actionIndex() {
         //find the number of the users
- 
+
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-            
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
         ]);
     }
 
@@ -67,10 +64,9 @@ class UserController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionView($id)
-    {
+    public function actionView($id) {
         return $this->render('view', [
-            'model' => $this->findModel($id),
+                    'model' => $this->findModel($id),
         ]);
     }
 
@@ -79,21 +75,26 @@ class UserController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
-    {
-        if(Yii::$app->user->can('create-admin'))
-        {
+    public function actionCreate() {
+        if (Yii::$app->user->can('create-admin')) {
             $model = new User();
 
-            if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            if ($model->load(Yii::$app->request->post())) {
+                //upload the file
+                $model->attachment = UploadedFile::getInstance($model, 'attachment');
+                if ($model->attachment) {
+                    $time = time();
+                    $model->attachment->saveAs('profilepics/' . $time . '.' . $model->attachment->extension);
+                    $model->attachment = 'profilepics/' . $time . '.' . $model->attachment->extension;
+                }
+                $model->save();
                 return $this->redirect(['view', 'id' => $model->id]);
             } else {
                 return $this->render('create', [
-                    'model' => $model,
+                            'model' => $model,
                 ]);
             }
-        }else
-        {
+        } else {
             throw new ForbiddenHttpException('Only MTech Super  admin can create new admin');
         }
     }
@@ -104,25 +105,28 @@ class UserController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionUpdate($id)
-    {
-        if(Yii::$app->user->can('update-admin'))
-        {
-         $model = $this->findModel($id);
-        if ($model->load(Yii::$app->request->post()) ) {
-            $model->updated_at=  date('Y-m-d h:m:s');
-             $model->save();
-            return $this->redirect(['view', 'id' => $model->id]);
+    public function actionUpdate($id) {
+        if (Yii::$app->user->can('update-admin')) {
+            $model = $this->findModel($id);
+            if ($model->load(Yii::$app->request->post())) {
+                $model->updated_at = date('Y-m-d h:m:s');
+                //upload the file
+                $model->attachment = UploadedFile::getInstance($model, 'attachment');
+                if ($model->attachment) {
+                    $time = time();
+                    $model->attachment->saveAs('profilepics/' . $time . '.' . $model->attachment->extension);
+                    $model->attachment = 'profilepics/' . $time . '.' . $model->attachment->extension;
+                }
+                $model->save();
+                return $this->redirect(['view', 'id' => $model->id]);
+            } else {
+                return $this->render('update', [
+                            'model' => $model,
+                ]);
+            }
         } else {
-            return $this->render('update', [
-                'model' => $model,
-            ]);
-        }  
-        }else
-        {
             throw new ForbiddenHttpException('Only MTech Super  admin can update admins');
         }
-
     }
 
     /**
@@ -131,14 +135,11 @@ class UserController extends Controller
      * @param integer $id
      * @return mixed
      */
-    public function actionDelete($id)
-    {
-        if(Yii::$app->user->can('delete-admin'))
-        {
-        $this->findModel($id)->delete();
-        return $this->redirect(['index']);
-        }else
-        {
+    public function actionDelete($id) {
+        if (Yii::$app->user->can('delete-admin')) {
+            $this->findModel($id)->delete();
+            return $this->redirect(['index']);
+        } else {
             throw new ForbiddenHttpException('Only MTech Super  admin can delete the admin');
         }
     }
@@ -150,12 +151,12 @@ class UserController extends Controller
      * @return User the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
-    protected function findModel($id)
-    {
+    protected function findModel($id) {
         if (($model = User::findOne($id)) !== null) {
             return $model;
         } else {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
 }

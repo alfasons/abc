@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h2 class="center"> OUR STRATEGIC PLANS.</h2>
 	
 			<!-- about us slider -->
-                        <div id="about-slider" style="border: 1px solid black; border-radius: 10px; top: -40px" class="col-md-offset-1 col-md-9">
+                        <div id="about-slider" style="border: 1px solid black; border-radius: 10px;" class="col-md-offset-1 col-md-9">
 				<div id="carousel-slider" class="carousel slide" data-ride="carousel">
 					<!-- Indicators -->
 				  	<ol class="carousel-indicators visible-xs">
@@ -46,6 +46,8 @@ $this->params['breadcrumbs'][] = $this->title;
                             
                         </div>
 			  </div>
+<br>
+
  <?= $p->content_info;?>    
 
 

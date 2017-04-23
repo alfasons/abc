@@ -10,14 +10,21 @@ use yii\captcha\Captcha;
 
 ?>
 
-            
-                <h2>How To Reach Us</h2>
-                <p class="">Drop Your Message!.</p>
-         
-                <div class="row">
+             <h2 class="center">CONTACT US.</h2>
+       
+      
+                 <div class="row">
+                <div class="col-md-offset-2 col-md-8">
+                    <div class="panel panel-default" style=" background-color:#fff; border: 1px solid #cccccc; ">
+             
+                     
+                     
+              <div class="panel-body"style=" background-color:transparent; color:#000; font-family:Arial, Helvetica, sans-serif; font-size:12px" >
+           <div class="center">Drop a message.</div>
                      <?php $form = ActiveForm::begin(['id' => 'contact-form']); ?>
-                    <div class="col-md-6">
+                  
                           <?= $form->field($model, 'name', ['template' => '
+                              Full Name*
                                 <div class="input-group col-sm-12 ">
                                   <span class="input-group-addon">
                                   <span class="fa fa-user"></span>
@@ -25,10 +32,11 @@ use yii\captcha\Captcha;
                                       {input} 
                                  </div>
                                     {error}{hint}
-                                  '] 
+                                  ','inputOptions' => ['placeholder' =>'','class' => 'form-control']] 
                                   )->textInput(['autofocus'=>true])  ?>
                        
                             <?= $form->field($model, 'email', ['template' => '
+                                 Email*
                                 <div class="input-group col-sm-12 ">
                                   <span class="input-group-addon">
                                   <span class="fa fa-envelope"></span>
@@ -36,10 +44,11 @@ use yii\captcha\Captcha;
                                       {input} 
                                  </div>
                                     {error}{hint}
-                                  '] 
+                                  ','inputOptions' => ['placeholder' =>'','class' => 'form-control']] 
                                )->textInput(['autofocus'=>true])  ?> 
                        
                              <?= $form->field($model, 'subject', ['template' => '
+                                  Subject*
                                 <div class="input-group col-sm-12 ">
                                   <span class="input-group-addon">
                                   <span class="fa fa-pencil"></span>
@@ -47,11 +56,11 @@ use yii\captcha\Captcha;
                                       {input} 
                                  </div>
                                     {error}{hint}
-                                  '] 
+                                  ','inputOptions' => ['placeholder' =>'','class' => 'form-control']] 
                                   )->textInput(['autofocus'=>true])  ?>
-                    </div>
-                    <div class="col-md-6">
+       
                             <?= $form->field($model, 'body', ['template' => '
+                                 Message*
                                 <div class="input-group col-sm-12 ">
                                   <span class="input-group-addon">
                                   <span class="fa fa-comment"></span>
@@ -59,36 +68,52 @@ use yii\captcha\Captcha;
                                       {input} 
                                  </div>
                                     {error}{hint}
-                                  '] 
+                                  ','inputOptions' => ['placeholder' =>'','class' => 'form-control']] 
                                   )->textarea(['rows' => 5]) ?>
                         
                             <?= $form->field($model, 'verifyCode')->widget(Captcha::className(), [
                                 'template' => '<div class="row"><div class="col-lg-3">{image}</div><div class="col-lg-6">{input}</div></div>',
                             ]) ?>                        
-                    </div>
+                 
                       <?= Html::submitButton('Submit', ['class' => 'btn btn-success', 'name' => 'contact-button']) ?>
-                        
-                <?php ActiveForm::end(); ?>
-                </div>
-        
-                
-                  
-                       
-  
-                        
-
-                                             
-
-              
                          
-       
-     
+                <?php ActiveForm::end(); ?>
+                  <hr>
+                  
+                
+                          
+                  <div class="row">
+                  
+                      <div class="col-md-offset-1 ">
+                          <h5 class="center">Head Office Address/Contacts</h5>
+                          <div class="col-md-6">
+                               
+                                   <p>Chemolingot High School, <br>
+                                   P. O Box 1121-00100, <br>
+                                   Marigat.
+                                   </p>
+                          </div>
+                          <div class="col-md-5">
+                             
+                              <p> <span class="fa fa-phone"></span> : 670-898-2847 <br>
+                                       <span class="fa fa-envelope-o"></span> :info@domain.com</p>
+                          </div>
+             
 
+                       </div>   
+                    </div>
+                    </div>
+                </div>
+            </div>
+                        
+                 
+                
+                  </div>
+           
+                 <div class="row">
    
                      
-            <h2>Or Visit Our Premises</h2>
-            <p class="lead">Get in touch to our esteem offices</p>
-     
+            <h2 class="center">OR  Visit Our Location</h2>
         <div class="gmap-area">
            
                 <div class="row">
@@ -98,46 +123,7 @@ use yii\captcha\Captcha;
                         </div>
                     </div>
 
-                    <div class="col-sm-5 map-content">
-                        <ul class="row">
-                            <li class="col-sm-6">
-                                <address>
-                                    <h5>Head Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zonal Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>                                
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-
-
-                            <li class="col-sm-6">
-                                <address>
-                                    <h5>Zone#2 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-
-                                <address>
-                                    <h5>Zone#3 Office</h5>
-                                    <p>1537 Flint Street <br>
-                                    Tumon, MP 96911</p>
-                                    <p>Phone:670-898-2847 <br>
-                                    Email Address:info@domain.com</p>
-                                </address>
-                            </li>
-                        </ul>
-                    </div>
+                  
                 </div>
             </div>
-  
+  </div>

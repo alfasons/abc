@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model common\models\search\SearchAlumini */
+/* @var $model frontend\models\search\SearchAlumini */
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
@@ -19,15 +19,15 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'full_name') ?>
 
-    <?= $form->field($model, 'mobile_no') ?>
-
-    <?= $form->field($model, 'email_address') ?>
+    <?= $form->field($model, 'adm_no') ?>
 
     <?= $form->field($model, 'gender') ?>
 
-    <?php // echo $form->field($model, 'adm_no') ?>
+    <?= $form->field($model, 'mobile_no') ?>
 
-    <?php // echo $form->field($model, 'year_completed') ?>
+    <?php // echo $form->field($model, 'email_address') ?>
+
+    <?php // echo $form->field($model, 'year') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

@@ -45,7 +45,7 @@ h4{
 }
 
 a {
-  color: #fff;
+    color:  #009999;
   -webkit-transition: color 300ms, background-color 300ms;
   -moz-transition: color 300ms, background-color 300ms;
   -o-transition:  color 300ms, background-color 300ms;
@@ -65,7 +65,7 @@ hr {
 .btn-primary {
   padding: 8px 20px;
   background: #2D7DA4;
-  color: #fff;
+  
   border-radius: 4px;
   border:none;
   margin-top: 10px;
@@ -74,7 +74,7 @@ hr {
 
 .btn-primary:hover, 
 .btn-primary:focus{
-  background: #fff;
+  
   outline: none;
   box-shadow: none;
 } 
@@ -121,7 +121,7 @@ body > section {
 
 .center {
   text-align: center;
-  padding-bottom: 55px;
+  padding-bottom:20px;
 }
 
 .scaleIn {
@@ -133,6 +133,11 @@ body > section {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
+}
+.horizdot{
+    margin: 0 0 10px;
+  border-bottom: 1px dashed #B6B6B6;
+    
 }
 
 .transparent-bg {

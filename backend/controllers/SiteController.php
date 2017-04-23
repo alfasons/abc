@@ -1,4 +1,5 @@
 <?php
+
 namespace backend\controllers;
 
 use Yii;
@@ -11,29 +12,30 @@ use common\models\LoginForm;
 use backend\models\SignupForm;
 use backend\models\PasswordResetRequestForm;
 use backend\models\ResetPasswordForm;
+use backend\models\AuthItem;
 use yii\helpers\Html;
+
 /**
-/**
+  /**
  * Site controller
  */
-class SiteController extends Controller
-{
+class SiteController extends Controller {
+
     /**
      * @inheritdoc
      */
-    public function behaviors()
-    {
+    public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                 'only' => ['logout', 'signup','index','faqs'],
+                'only' => ['logout', 'signup', 'index', 'faqs'],
                 'rules' => [
                     [
                         'actions' => ['login', 'error'],
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout','index','faqs','signup'],
+                        'actions' => ['logout', 'index', 'faqs', 'signup'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -51,16 +53,14 @@ class SiteController extends Controller
     /**
      * @inheritdoc
      */
-    public function actions()
-    {
+    public function actions() {
         return [
             'error' => [
                 'class' => 'yii\web\ErrorAction',
-            ],          
+            ],
             'captcha' => [
                 'class' => 'yii\captcha\CaptchaAction',
             ],
-            
         ];
     }
 
@@ -69,19 +69,18 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
-        
+    public function actionIndex() {
+
         return $this->render('index');
     }
+
     /**
      * Login action.
      *
      * @return string
      */
-    public function actionLogin()
-    {
-        $this->layout='LoginLayout';
+    public function actionLogin() {
+        $this->layout = 'LoginLayout';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -91,77 +90,75 @@ class SiteController extends Controller
             return $this->goBack();
         } else {
             return $this->render('login', [
-                'model' => $model,
+                        'model' => $model,
             ]);
         }
     }
-     public function actionSignup()
-    {
+
+    public function actionSignup() {
         $model = new SignupForm();
+        $authItems = AuthItem::find()->all();
         if ($model->load(Yii::$app->request->post())) {
-        if ($user = $model->signup()) {
-        $email = \Yii::$app->mailer->compose()
-        ->setTo($user->email)
-        ->setFrom([\Yii::$app->params['supportEmail'] =>'Chemolingot High'])
-        ->setSubject('Account Activation')
-        ->setTextBody(" Chemolingot High School
-            
-             Hello ".$user->firstname  ." ".$user->lastname .",
-                     
-            
+            if ($user = $model->signup()) {
+                $email = \Yii::$app->mailer->compose()
+                        ->setTo($user->email)
+                        ->setFrom([\Yii::$app->params['supportEmail'] => 'Chemolingot High'])
+                        ->setSubject('Account Activation')
+                        ->setTextBody(" Chemolingot High School
+
+                      Hello " . $user->firstname . " " . $user->lastname . ",
+
                         Please click the link below to confirm  your Identity.
-            
-        
-         
-                            ".
-                           Yii::$app->urlManager->createAbsoluteUrl(['site/confirm','id'=>$user->id,'key'=>$user->auth_key]
-                           )."
-                               
 
-                 Chemolingot High   ||   ". date('d-m-Y    h:m:s') ." 
 
-        
 
-         
-               
+                            " .
+                                Yii::$app->urlManager->createAbsoluteUrl(['site/confirm', 'id' => $user->id, 'key' => $user->auth_key]
+                                ) . "
+
+
+                 Chemolingot High   ||   " . date('d-m-Y    h:m:s') . "
+
+
+
+
+
   "
-           
-        )
-        ->send();
-        if($email){
-        Yii::$app->getSession()->setFlash('success','Check Your email!');
-        }
-        else{
-        Yii::$app->getSession()->setFlash('warning','Failed, contact Admin!');
-        }
-        return $this->goHome();
-        }
+                        )
+                        ->send();
+                if ($email) {
+                    Yii::$app->getSession()->setFlash('success', 'Check Your email!');
+                } else {
+                    Yii::$app->getSession()->setFlash('warning', 'Failed, contact Admin!');
+                }
+                return $this->goHome();
+            }
         }
 
         return $this->render('signup', [
-        'model' => $model,
+                    'model' => $model,
+                    'authItems' => $authItems,
         ]);
-}
-    
+    }
+
     /**
      * Logout action.
      *
      * @return string
      */
-    public function actionLogout()
-    {
+    public function actionLogout() {
         Yii::$app->user->logout();
 
         return $this->goHome();
     }
-    
+
     /**
      * Requests password reset.
      *
      * @return mixed
      */
-    public function actionRequestPasswordReset()
-    {
+    public function actionRequestPasswordReset() {
+        $this->layout = 'LoginLayout';
         $model = new PasswordResetRequestForm();
         if ($model->load(Yii::$app->request->post()) && $model->validate()) {
             if ($model->sendEmail()) {
@@ -174,7 +171,7 @@ class SiteController extends Controller
         }
 
         return $this->render('requestPasswordResetToken', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
 
@@ -185,8 +182,8 @@ class SiteController extends Controller
      * @return mixed
      * @throws BadRequestHttpException
      */
-    public function actionResetPassword($token)
-    {
+    public function actionResetPassword($token) {
+        $this->layout = 'LoginLayout';
         try {
             $model = new ResetPasswordForm($token);
         } catch (InvalidParamException $e) {
@@ -200,48 +197,47 @@ class SiteController extends Controller
         }
 
         return $this->render('resetPassword', [
-            'model' => $model,
+                    'model' => $model,
         ]);
     }
-    public function actionReport()
-    {
+
+    public function actionReport() {
         return $this->render('report');
-    } 
-    public function actionConfirm( $key)
-        {
+    }
+
+    public function actionConfirm($key) {
         $user = \common\models\User::find()->where([
-        
-        'auth_key'=>$key,
-        'status'=>0,
-        ])->one();
-        if(!empty($user)){
-        $user->status=10;
-        $user->save();
-        Yii::$app->getSession()->setFlash('success','Success!');
-        }
-        else{
-        Yii::$app->getSession()->setFlash('warning','Failed!');
+                    'auth_key' => $key,
+                    'status' => 0,
+                ])->one();
+        if (!empty($user)) {
+            $user->status = 10;
+            $user->save();
+            Yii::$app->getSession()->setFlash('success', 'Success!');
+        } else {
+            Yii::$app->getSession()->setFlash('warning', 'Failed!');
         }
         return $this->goHome();
-        }
-           public function actionErrors_403()
-    {
-      return  $this->render('errors_403');
     }
-        public function actionErrors_404()
-    {
-      return  $this->render('errors_404');
+
+    public function actionErrors_403() {
+        return $this->render('errors_403');
     }
-        public function actionErrors_405()
-    {
-       return $this->render('errors_405');
+
+    public function actionErrors_404() {
+        return $this->render('errors_404');
     }
-        public function actionErrors_500()
-    {
-       return $this->render('errors_500');
+
+    public function actionErrors_405() {
+        return $this->render('errors_405');
     }
-        public function actionErrors_503()
-    {
-       return $this->render('errors_503');
+
+    public function actionErrors_500() {
+        return $this->render('errors_500');
     }
+
+    public function actionErrors_503() {
+        return $this->render('errors_503');
+    }
+
 }

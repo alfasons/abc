@@ -18,8 +18,8 @@ class SearchAlumini extends Alumini
     public function rules()
     {
         return [
-            [['id', 'full_name', 'gender', 'adm_no', 'year_completed'], 'integer'],
-            [['mobile_no', 'email_address'], 'safe'],
+            [['id', 'adm_no', 'mobile_no'], 'integer'],
+            [['full_name', 'gender', 'email_address', 'year'], 'safe'],
         ];
     }
 
@@ -60,14 +60,14 @@ class SearchAlumini extends Alumini
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'full_name' => $this->full_name,
-            'gender' => $this->gender,
             'adm_no' => $this->adm_no,
-            'year_completed' => $this->year_completed,
+            'mobile_no' => $this->mobile_no,
         ]);
 
-        $query->andFilterWhere(['like', 'mobile_no', $this->mobile_no])
-            ->andFilterWhere(['like', 'email_address', $this->email_address]);
+        $query->andFilterWhere(['like', 'full_name', $this->full_name])
+            ->andFilterWhere(['like', 'gender', $this->gender])
+            ->andFilterWhere(['like', 'email_address', $this->email_address])
+            ->andFilterWhere(['like', 'year', $this->year]);
 
         return $dataProvider;
     }

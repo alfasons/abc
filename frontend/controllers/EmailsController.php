@@ -1,7 +1,6 @@
 <?php
 
 namespace frontend\controllers;
-
 use Yii;
 use frontend\models\Emails;
 use yii\web\UploadedFile;
@@ -9,7 +8,6 @@ use frontend\models\search\EmailsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
 /**
  * EmailsController implements the CRUD actions for Emails model.
  */

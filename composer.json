@@ -25,7 +25,8 @@
         "kartik-v/yii2-widget-select2": "@dev",
         "phpoffice/phpexcel": "dev-develop",
         "cliff363825/yii2-kindeditor": "*",
-        "yiisoft/yii2-apidoc": "~2.1.0"
+        "yiisoft/yii2-apidoc": "~2.1.0",
+        "2amigos/yii2-gallery-widget": "~1.0"
    
      
         
