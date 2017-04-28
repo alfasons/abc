@@ -35,7 +35,7 @@ DashboardAsset::register($this);
                     <header class="navbar-header">
 
                         <a href="<?php echo Yii::$app->urlManager->createUrl(['site/index']); ?>" class="navbar-brand">
-                            <img src="images/techlogo.png" height="40" width="200"alt=""   />
+                            <img src="img/schoollogo.png" height="40" width="200"alt=""   />
 
                         </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
@@ -198,6 +198,7 @@ DashboardAsset::register($this);
         <script src="js/plugins/jquery-2.0.3.min.js"></script>
         <script src="js/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+
         <!-- END GLOBAL SCRIPTS -->
 
         <!-- PAGE LEVEL SCRIPTS -->
@@ -206,6 +207,8 @@ DashboardAsset::register($this);
         <script src="js/plugins/flot/jquery.flot.time.js"></script>
         <script  src="js/plugins/flot/jquery.flot.stack.js"></script>
         <script src="js/js/for_index.js"></script>
+
+
 
 
         <!-- END PAGE LEVEL SCRIPTS -->

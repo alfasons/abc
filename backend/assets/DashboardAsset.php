@@ -7,8 +7,8 @@ use yii\web\AssetBundle;
 /**
  * Main backend application asset bundle.
  */
-class DashboardAsset extends AssetBundle
-{
+class DashboardAsset extends AssetBundle {
+
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
@@ -21,13 +21,16 @@ class DashboardAsset extends AssetBundle
         'css/plugins/flot/examples/examples.css',
         'css/css/layout2.css',
         'css/plugins/timeline/timeline.css',
-      
+        'css/css/dashboard.css',
+        'css/css/wizardjs.css',
     ];
     public $js = [
-      
+        'js/js/dashboard.js',
+        'js/js/wizardjs.js'
     ];
     public $depends = [
-       'yii\web\YiiAsset',
-       'yii\bootstrap\BootstrapAsset',
+        'yii\web\YiiAsset',
+        'yii\bootstrap\BootstrapAsset',
     ];
+
 }

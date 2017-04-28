@@ -6,129 +6,196 @@ $this->title = 'My  Application';
 <div class="site-index">
 
     </br
-
-    <!--BLOCK SECTION -->
-    <div class="row">
-        <div class="col-lg-12">
-            <div style="text-align: center;">
-
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['user/index']); ?>">
-                    <i class="icon-user icon-3x"></i>
-                    <span> Admins</span>
-                    <span class="label label-success">6</span>
-                </a>
-
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['contents/index']); ?>">
-                    <i class="icon-tasks icon-3x"></i>
-                    <span>Contents</span>
-                    <span class="label btn-metis-4">6</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['academics/index']); ?>">
-                    <i class="icon-smile icon-3x"></i>
-                    <span>Academics</span>
-                    <span class="label btn-metis-4">456</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['students/index']); ?>">
-                    <i class="icon-group icon-3x"></i>
-                    <span>Students</span>
-                    <span class="label btn-metis-2">6</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['principals/index']); ?>">
-                    <i class="icon-key icon-3x"></i>
-                    <span>Principals</span>
-                    <span class="label label-danger">6</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['alumini/index']); ?>">
-                    <i class="icon-group icon-3x"></i>
-                    <span>Alumini</span>
-                    <span class="label label-danger">6</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['projects/index']); ?>">
-                    <i class="icon-building icon-3x"></i>
-                    <span>Projects</span>
-                    <span class="label label-danger">6</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['downloads/index']); ?>">
-                    <i class="icon-download icon-3x"></i>
-                    <span>Downloads</span>
-                    <span class="label label-danger">6</span>
-                </a>
-                <a class="quick-btn" href="<?php echo Yii::$app->urlManager->createUrl(['faqs/index']); ?>">
-                    <i class="icon-question icon-3x"></i>
-                    <span>Faqs</span>
-                    <span class="label label-warning">25</span>
-                </a>
-
-
-
-            </div>
-
-        </div>
-
-    </div>
-    <!--END BLOCK SECTION -->
     <!-- COMMENT AND NOTIFICATION  SECTION -->
 
-
     <div class="row">
-        <div class="col-lg-5">
+        <div class="col-lg-12">
 
-            <div class="panel panel-danger">
+            <div class="panel panel-success">
                 <div class="panel-heading">
-                    <i class="icon-bell"></i> Chemolingot Notifications  Panel
+                    <h4 class="col-md-offset-2"><i class="icon-asterisk ">&nbsp;&nbsp;</i>System Administration Central Point Dashboard</h4>
                 </div>
 
                 <div class="panel-body">
                     <div class="list-group">
-                        <a href="#" class="list-group-item">
-                            <i class=" icon-comment"></i> New Comment
-                            <span class="pull-right text-muted small"><em> 4 minutes ago</em>
-                            </span>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <i class="icon-twitter"></i> 3 New Followers
-                            <span class="pull-right text-muted small"><em> 12 minutes ago</em>
-                            </span>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <i class="icon-envelope"></i> Message Sent
-                            <span class="pull-right text-muted small"><em> 27 minutes ago</em>
-                            </span>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <i class="icon-tasks"></i> New Task
-                            <span class="pull-right text-muted small"><em>43 minutes ago</em>
-                            </span>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <i class="icon-upload"></i> Server Rebooted
-                            <span class="pull-right text-muted small"><em>11:32 AM</em>
-                            </span>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <i class="icon-warning-sign"></i> Server Crashed!
-                            <span class="pull-right text-muted small"><em>11:13 AM</em>
-                            </span>
-                        </a>
+                        <!-- Awesome -->
 
-                        <a href="#" class="list-group-item">
-                            <i class="icon-ok"></i> New Order Placed
-                            <span class="pull-right text-muted small"><em>9:49 AM</em>
-                            </span>
-                        </a>
-                        <a href="#" class="list-group-item">
-                            <i class=" icon-money"></i> Payment Received
-                            <span class="pull-right text-muted small"><em>Yesterday</em>
-                            </span>
-                        </a>
+                        <div class="row">
+
+                            <div class="form-group">
+                                <div class="col-sm-12 col-md-12 col-lg-12">
+                                    <input type="search" class="form-control" id="search" placeholder="Add your options..">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group">
+                                <div class="searchable-container">
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['user/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Admins</h5>
+                                                            <i class="icon-user icon-3x"></i>
+
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['contents/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Contents</h5>
+                                                            <i class="icon-tasks icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['academics/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Academics</h5>
+                                                            <i class="icon-smile icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['students/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Students</h5>
+                                                            <i class="icon-group icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['principals/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Principals</h5>
+                                                            <i class="icon-key icon-3x"></i>
+
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['alumini/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Aluminis</h5>
+                                                            <i class="icon-group icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['projects/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Projects</h5>
+                                                            <i class="icon-building icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['downloads/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;Downloads</h5>
+                                                            <i class="icon-download icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
+                                        <a href="<?php echo Yii::$app->urlManager->createUrl(['faqs/index']); ?>">
+                                            <div class="info-block block-info clearfix">
+                                                <div class="square-box pull-left">
+                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
+                                                </div>
+                                                <div class="btn-group bizmoduleselect">
+                                                    <label class="btn btn-default">
+                                                        <div class="bizcontent">
+                                                            <h5><span class="label label-danger">6</span>&nbsp;FAQS</h5>
+                                                            <i class="icon-question icon-3x"></i>
+                                                        </div>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
-                    <a href="#" class="btn btn-default btn-block btn-primary">View All Alerts</a>
+
                 </div>
 
             </div>
-
-
 
         </div>
         <div class="col-lg-7">
@@ -226,7 +293,96 @@ $this->title = 'My  Application';
 
 
         </div>
+        <div class="col-lg-5">
 
+            <div class="chat-panel panel panel-success">
+                <div class="panel-heading">
+                    <i class="icon-user "></i>
+                    Developer information
+
+                </div>
+
+                <div class="panel-body">
+                    <div class="row">
+
+                        <div class="col-md-12 col-sm-6">
+                            <div class="card-container">
+                                <div class="card">
+                                    <div class="front">
+                                        <div class="cover">
+                                            <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg"/>
+                                        </div>
+                                        <div class="user">
+                                            <img class="img-circle"src="attachments/1492954287.png" alt=""/>
+
+
+                                        </div>
+                                        <div class="content">
+                                            <div class="main">
+                                                <h3 class="name">Alfason K. chirchir</h3>
+                                                <p class="profession">Develover</p>
+                                                <p class="text-center">"I love my job and what i do, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                            </div>
+                                            <div class="footer">
+                                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                                            </div>
+                                        </div>
+                                    </div> <!-- end front panel -->
+                                    <div class="back">
+                                        <div class="header">
+                                            <h5 class="motto">"Motto: I can do Everthing through Christ who strengthens me"</h5>
+                                        </div>
+                                        <div class="content">
+                                            <div class="main">
+                                                <h4 class="text-center">Job Description</h4>
+                                                <p class="text-center">System/Web design,, HTML5, CSS3,Bootstrap4,Share point,C#,PHP,Javascript, vb.net andmany others</p>
+
+                                                <div class="stats-container">
+                                                    <div class="stats">
+                                                        <h4>235</h4>
+                                                        <p>
+                                                            Followers
+                                                        </p>
+                                                    </div>
+                                                    <div class="stats">
+                                                        <h4>114</h4>
+                                                        <p>
+                                                            Following
+                                                        </p>
+                                                    </div>
+                                                    <div class="stats">
+                                                        <h4>35</h4>
+                                                        <p>
+                                                            Projects
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                        <div class="footer">
+                                            <div class="social-links text-center">
+                                                <a href="http://deepak646.blogspot.in/" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                                                <a href="http://deepak646.blogspot.in/" class="google"><i class="fa fa-google-plus fa-fw"></i></a>
+                                                <a href="http://deepak646.blogspot.in/" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                                            </div>
+                                        </div>
+                                    </div> <!-- end back panel -->
+                                </div> <!-- end card -->
+                            </div> <!-- end card-container -->
+
+                            <!--         <div class="col-sm-1"></div> -->
+
+                        </div> <!-- end col-sm-10 -->
+                    </div> <!-- end row -->
+                </div>
+
+
+
+            </div>
+
+
+        </div>
     </div>
     <!-- END COMMENT AND NOTIFICATION  SECTION -->
 
