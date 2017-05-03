@@ -25,8 +25,11 @@ class DashboardAsset extends AssetBundle {
         'css/css/wizardjs.css',
     ];
     public $js = [
+        'js/plugins/jquery-2.0.3.min.js',
+        'js/plugins/bootstrap/js/bootstrap.min.js',
+        'js/plugins/bootstrap/js/bootstrap.min.js',
         'js/js/dashboard.js',
-        'js/js/wizardjs.js'
+            // 'js/js/wizardjs.js'
     ];
     public $depends = [
         'yii\web\YiiAsset',

@@ -39,6 +39,7 @@ DashboardAsset::register($this);
 
                         </a>
                         &nbsp;&nbsp;&nbsp;&nbsp;
+
                     </header>
                     <!-- END LOGO SECTION -->
 
@@ -57,7 +58,7 @@ DashboardAsset::register($this);
                 <div class="media user-media well-small">
                     <br/>
                     <a class="user-link" href="<?php echo Yii::$app->urlManager->createUrl(['user/index']); ?>">
-                        <img class="media-object img-circle user-img" alt="User Picture" src="<?= Yii::$app->user->identity->attachment ?>" width="80" height="80" />
+                        <img class="media-object img-circle user-img" alt="User Picture" src="<?= Yii::$app->user->identity->attachment ?>" style="display:block; width: 100px;" />
                     </a>
                     <br />
                     <div class="media-body">
@@ -122,6 +123,7 @@ DashboardAsset::register($this);
             <div id="content">
                 <div class="inner" style="min-height: 700px;">
                     <br>
+
                     <?=
                     Breadcrumbs::widget([
                         'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
@@ -130,6 +132,7 @@ DashboardAsset::register($this);
                     <?= Alert::widget() ?>
 
                     <?= $content ?>
+
                 </div>
 
             </div>
@@ -194,21 +197,23 @@ DashboardAsset::register($this);
             </div>
         </footer>
 
-        <!-- GLOBAL SCRIPTS -->
+
+        <!-- GLOBAL SCRIPTS 
+
         <script src="js/plugins/jquery-2.0.3.min.js"></script>
         <script src="js/plugins/bootstrap/js/bootstrap.min.js"></script>
         <script src="js/plugins/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 
         <!-- END GLOBAL SCRIPTS -->
 
-        <!-- PAGE LEVEL SCRIPTS -->
+        <!-- PAGE LEVEL SCRIPTS
         <script src="js/plugins/flot/jquery.flot.js"></script>
         <script src="js/plugins/flot/jquery.flot.resize.js"></script>
         <script src="js/plugins/flot/jquery.flot.time.js"></script>
         <script  src="js/plugins/flot/jquery.flot.stack.js"></script>
         <script src="js/js/for_index.js"></script>
 
-
+        -->
 
 
         <!-- END PAGE LEVEL SCRIPTS -->

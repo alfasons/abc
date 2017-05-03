@@ -48,35 +48,34 @@ use dosamigos\tinymce\TinyMce;
             <div class="row">
                 <div class="col-md-offset-1">
                     <p>     Please edit the content below</p>
-                    <?php
-                    /* =
-                      \cliff363825\kindeditor\KindEditorWidget::widget([
-                      'model' => $model,
-                      'attribute' => 'content_info',
-                      'options' => [], // html attributes
-                      'clientOptions' => [
-                      'width' => '700px',
-                      'height' => '250px',
-                      'themeType' => 'default', // optional: default, simple, qq
-                      'langType' => \cliff363825\kindeditor\KindEditorWidget::LANG_TYPE_EN, // optional: ar, en, ko, ru, zh-CN, zh-TW
-                      ],
-                      ]); */
-                    echo $form->field($model, 'content_info')->widget(TinyMce::className());
+                    <?=
+                    \cliff363825\kindeditor\KindEditorWidget::widget([
+                        'model' => $model,
+                        'attribute' => 'content_info',
+                        'options' => [], // html attributes
+                        'clientOptions' => [
+                            'width' => '700px',
+                            'height' => '250px',
+                            'themeType' => 'default', // optional: default, simple, qq
+                            'langType' => \cliff363825\kindeditor\KindEditorWidget::LANG_TYPE_EN, // optional: ar, en, ko, ru, zh-CN, zh-TW
+                        ],
+                    ]);
+                    //echo $form->field($model, 'content_info')->widget(TinyMce::className());
                     ?>
 
-                    <?=
-                    $form->field($model, 'content_info')->widget(TinyMce::className(), [
-                        'options' => ['rows' => 6],
-                        'language' => 'es',
-                        'clientOptions' => [
-                            'plugins' => [
-                                "advlist autolink lists link charmap print preview anchor",
-                                "searchreplace visualblocks code fullscreen",
-                                "insertdatetime media table contextmenu paste"
-                            ],
-                            'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
-                        ]
-                    ]);
+                    <?php /* =
+                      $form->field($model, 'content_info')->widget(TinyMce::className(), [
+                      'options' => ['rows' => 6],
+                      'language' => 'es',
+                      'clientOptions' => [
+                      'plugins' => [
+                      "advlist autolink lists link charmap print preview anchor",
+                      "searchreplace visualblocks code fullscreen",
+                      "insertdatetime media table contextmenu paste"
+                      ],
+                      'toolbar' => "undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
+                      ]
+                      ]); */
                     ?>
                     <br>
                 </div>

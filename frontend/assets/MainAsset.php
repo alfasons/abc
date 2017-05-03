@@ -7,8 +7,8 @@ use yii\web\AssetBundle;
 /**
  * Main backend application asset bundle.
  */
-class MainAsset extends AssetBundle
-{
+class MainAsset extends AssetBundle {
+
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
@@ -20,33 +20,26 @@ class MainAsset extends AssetBundle
         'css/main.css',
         'css/responsive.css',
         'css/jsor.css',
-        
         'css/pnotify.css',
         'css/pnotify.buttons.css',
         'css/pnotify.nonblock.css',
-      
-  
-           ];
+        'css/wowanimate.css'
+    ];
     public $js = [
-          //  'js/jquery.js',
-            'js/bootstrap.min.js',
-            'js/jquery.prettyPhoto.js',
-            'js/jquery.isotope.min.js',
-            'js/main.js',
-            'js/wow.min.js',
-        
-           // 'js/jpnotify.js',
-           // 'js/pnotify.buttons.js',
-          //  'js/pnotify.nonblock.js',
-        
-       
-       
-         
-    
+        //  'js/jquery.js',
+        'js/bootstrap.min.js',
+        'js/jquery.prettyPhoto.js',
+        'js/jquery.isotope.min.js',
+        'js/main.js',
+        'js/wow.min.js',
+        'js/wowslide.js'
+            // 'js/jpnotify.js',
+            // 'js/pnotify.buttons.js',
+            //  'js/pnotify.nonblock.js',
     ];
     public $depends = [
-   // 'yii\web\YiiAsset',
-    //  'yii\bootstrap\BootstrapAsset',
+            // 'yii\web\YiiAsset',
+            //  'yii\bootstrap\BootstrapAsset',
     ];
-}
 
+}

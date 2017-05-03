@@ -24,29 +24,30 @@ $this->title = 'My  Application';
 
                             <div class="form-group">
                                 <div class="col-sm-12 col-md-12 col-lg-12">
-                                    <input type="search" class="form-control" id="search" placeholder="Add your options..">
+                                    <input type="search" class="form-control" id="search" placeholder="search here">
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="form-group">
-                                <div class="searchable-container">
+
+                        <div class="searchable-container">
+                            <div class="row">
+                                <div class="form-group">
                                     <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
                                         <a href="<?php echo Yii::$app->urlManager->createUrl(['user/index']); ?>">
-                                            <div class="info-block block-info clearfix">
-                                                <div class="square-box pull-left">
-                                                    <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
-                                                </div>
-                                                <div class="btn-group bizmoduleselect">
-                                                    <label class="btn btn-default">
-                                                        <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Admins</h5>
-                                                            <i class="icon-user icon-3x"></i>
 
-                                                        </div>
-                                                    </label>
-                                                </div>
+                                            <div class="square-box pull-left">
+                                                <span class="glyphicon glyphicon-tags glyphicon-lg"></span>
                                             </div>
+                                            <div class="btn-group bizmoduleselect">
+                                                <label class="btn btn-default">
+                                                    <div class="bizcontent">
+                                                        <h5><span class="label label-success"><?= $countuser; ?></span>&nbsp;Admins</h5>
+                                                        <i class="icon-user icon-3x"></i>
+
+                                                    </div>
+                                                </label>
+                                            </div>
+
                                         </a>
                                     </div>
                                     <div class="items col-xs-5 col-sm-5 col-md-3 col-lg-3">
@@ -58,7 +59,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Contents</h5>
+                                                            <h5><span class="label label-danger"><?= $countcontents ?></span>&nbsp;Contents</h5>
                                                             <i class="icon-tasks icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -75,7 +76,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Academics</h5>
+                                                            <h5><span class="label label-danger"><?= $countacademics; ?></span>&nbsp;Academics</h5>
                                                             <i class="icon-smile icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -92,7 +93,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Students</h5>
+                                                            <h5><span class="label label-danger"><?= $countstudents; ?></span>&nbsp;Students</h5>
                                                             <i class="icon-group icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -109,7 +110,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Principals</h5>
+                                                            <h5><span class="label label-danger"><?= $countprincipals; ?></span>&nbsp;Principals</h5>
                                                             <i class="icon-key icon-3x"></i>
 
                                                         </div>
@@ -127,7 +128,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Aluminis</h5>
+                                                            <h5><span class="label label-danger"><?= $countalumini; ?></span>&nbsp;Aluminis</h5>
                                                             <i class="icon-group icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -144,7 +145,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Projects</h5>
+                                                            <h5><span class="label label-danger"><?= $countprojects; ?></span>&nbsp;Projects</h5>
                                                             <i class="icon-building icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -161,7 +162,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;Downloads</h5>
+                                                            <h5><span class="label label-danger"><?= $countdownloads; ?></span>&nbsp;Downloads</h5>
                                                             <i class="icon-download icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -178,7 +179,7 @@ $this->title = 'My  Application';
                                                 <div class="btn-group bizmoduleselect">
                                                     <label class="btn btn-default">
                                                         <div class="bizcontent">
-                                                            <h5><span class="label label-danger">6</span>&nbsp;FAQS</h5>
+                                                            <h5><span class="label label-danger"><?= $countfaqs; ?></span>&nbsp;FAQS</h5>
                                                             <i class="icon-question icon-3x"></i>
                                                         </div>
                                                     </label>
@@ -186,12 +187,10 @@ $this->title = 'My  Application';
                                             </div>
                                         </a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </div>
-
 
                 </div>
 
@@ -310,10 +309,11 @@ $this->title = 'My  Application';
                                 <div class="card">
                                     <div class="front">
                                         <div class="cover">
-                                            <img src="https://www.clipartsgram.com/image/129556292-kyz84k3.jpg"/>
+
+                                            <img src="background/a.jpg" alt=""/>
                                         </div>
                                         <div class="user">
-                                            <img class="img-circle"src="attachments/1492954287.png" alt=""/>
+                                            <img class="img-circle"src="attachments/1492954287.png" alt="no image"/>
 
 
                                         </div>
@@ -321,7 +321,7 @@ $this->title = 'My  Application';
                                             <div class="main">
                                                 <h3 class="name">Alfason K. chirchir</h3>
                                                 <p class="profession">Develover</p>
-                                                <p class="text-center">"I love my job and what i do, and since I made it here I can make it anywhere, yeah, they love me everywhere"</p>
+                                                <p class="text-center">"I love my job, and since I made it here I can make it anywhere, yeah, it's true Education is a key to Success"</p>
                                             </div>
                                             <div class="footer">
                                                 <i class="fa fa-mail-forward"></i> Auto Rotation
@@ -330,7 +330,7 @@ $this->title = 'My  Application';
                                     </div> <!-- end front panel -->
                                     <div class="back">
                                         <div class="header">
-                                            <h5 class="motto">"Motto: I can do Everthing through Christ who strengthens me"</h5>
+                                            <h5 class="motto"><img class="img-circle"src="attachments/1492954287.png" alt="#" height="30" width="30" />&nbsp;&nbsp;"Motto: I can do Everthing through Christ who strengthens me."</h5>
                                         </div>
                                         <div class="content">
                                             <div class="main">

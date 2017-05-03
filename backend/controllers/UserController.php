@@ -80,6 +80,8 @@ class UserController extends Controller {
             $model = new User();
 
             if ($model->load(Yii::$app->request->post())) {
+                $model->created_at = date('Y-m-d');
+                $model->updated_at = "0000-00-00";
                 //upload the file
                 $model->attachment = UploadedFile::getInstance($model, 'attachment');
                 if ($model->attachment) {
@@ -108,8 +110,12 @@ class UserController extends Controller {
     public function actionUpdate($id) {
         if (Yii::$app->user->can('update-admin')) {
             $model = $this->findModel($id);
+            $pic = $model->updated_at;
             if ($model->load(Yii::$app->request->post())) {
-                $model->updated_at = date('Y-m-d h:m:s');
+                $model->updated_at = date('Y-m-d');
+
+                // print_r($model);
+                // die();
                 //upload the file
                 $model->attachment = UploadedFile::getInstance($model, 'attachment');
                 if ($model->attachment) {
@@ -122,6 +128,7 @@ class UserController extends Controller {
             } else {
                 return $this->render('update', [
                             'model' => $model,
+                            'pic' => $pic,
                 ]);
             }
         } else {

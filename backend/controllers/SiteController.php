@@ -13,6 +13,15 @@ use backend\models\SignupForm;
 use backend\models\PasswordResetRequestForm;
 use backend\models\ResetPasswordForm;
 use backend\models\AuthItem;
+use backend\models\User;
+use backend\models\Contents;
+use backend\models\Principals;
+use backend\models\Downloads;
+use backend\models\Academics;
+use backend\models\Students;
+use common\models\Alumini;
+use backend\models\Faqs;
+use backend\models\Projects;
 use yii\helpers\Html;
 
 /**
@@ -70,8 +79,46 @@ class SiteController extends Controller {
      * @return string
      */
     public function actionIndex() {
+        //count items in db
+        $queryuser = User::find()->all();
+        $countuser = count($queryuser);
 
-        return $this->render('index');
+        $querycontents = Contents::find()->all();
+        $countcontents = count($querycontents);
+
+        $queryuprincipals = Principals::find()->all();
+        $countuprincipals = count($queryuprincipals);
+
+        $queryacademics = Academics::find()->all();
+        $countacademics = count($queryacademics);
+
+        $querydownloads = Downloads::find()->all();
+        $countdownloads = count($querydownloads);
+
+        $queryfaqs = Faqs::find()->all();
+        $countfaqs = count($queryfaqs);
+
+        $querystudents = Students::find()->all();
+        $countstudents = count($querystudents);
+
+        $queryalumini = Alumini::find()->all();
+        $countalumini = count($queryalumini);
+
+        $queryprojects = Projects::find()->all();
+        $countprojects = count($queryprojects);
+
+
+        return $this->render('index', [
+                    'countuser' => $countuser,
+                    'countcontents' => $countcontents,
+                    'countprincipals' => $countuprincipals,
+                    'countacademics' => $countacademics,
+                    'countdownloads' => $countdownloads,
+                    'countfaqs' => $countfaqs,
+                    'countstudents' => $countstudents,
+                    'countalumini' => $countalumini,
+                    'countprojects' => $countprojects,
+        ]);
     }
 
     /**
@@ -105,25 +152,11 @@ class SiteController extends Controller {
                         ->setFrom([\Yii::$app->params['supportEmail'] => 'Chemolingot High'])
                         ->setSubject('Account Activation')
                         ->setTextBody(" Chemolingot High School
-
-                      Hello " . $user->firstname . " " . $user->lastname . ",
-
-                        Please click the link below to confirm  your Identity.
-
-
-
+                           Hello " . $user->firstname . " " . $user->lastname . ",
+                             Please click the link below to confirm  your Identity.
                             " .
                                 Yii::$app->urlManager->createAbsoluteUrl(['site/confirm', 'id' => $user->id, 'key' => $user->auth_key]
-                                ) . "
-
-
-                 Chemolingot High   ||   " . date('d-m-Y    h:m:s') . "
-
-
-
-
-
-  "
+                                ) . " Chemolingot High   ||   " . date('d-m-Y    h:m:s') . " "
                         )
                         ->send();
                 if ($email) {
